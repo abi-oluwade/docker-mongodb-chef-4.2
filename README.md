@@ -22,4 +22,8 @@ successful build that can be accessed on dockerhub after adding post-processing 
 --> docker: Imported Docker image: sha256:90edcb8b076ad8f289d6d52118dcb40cb6d2fd42e89b5ce5c3041e479103ec1e
 --> docker: Imported Docker image: abioluwade/mongodb:0.1
 
+==> Builds finished. The artifacts of successful builds are:
+--> docker: Imported Docker image: sha256:d0cca42c6edd4ed6e5712ed135aa4bdbf1c7355168dc314e95fd2f0c60402373
+--> docker: Imported Docker image: abioluwade/mongodb:0.2
+
 ````

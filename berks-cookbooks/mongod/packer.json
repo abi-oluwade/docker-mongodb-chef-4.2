@@ -1,7 +1,7 @@
 {
   "builders": [{
     "type": "docker",
-    "image": "ubuntu",
+    "image": "ubuntu-upstart",
     "commit": true,
     "changes": [
       "EXPOSE 80 443 27017"
@@ -17,5 +17,15 @@
     "cookbook_paths": ["./berks-cookbooks"],
     "run_list": ["mongod::default"]
   }
-]
+],
+  "post-processors": [
+    [
+      {
+        "type": "docker-tag",
+        "repository": "abioluwade/mongodb",
+        "tag": "0.3"
+      },
+      "docker-push"
+    ]
+  ]
 }
