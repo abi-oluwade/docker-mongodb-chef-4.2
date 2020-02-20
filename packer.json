@@ -2,7 +2,10 @@
   "builders": [{
     "type": "docker",
     "image": "ubuntu",
-    "export_path": "image.tar"
+    "commit": true,
+    "changes": [
+      "EXPOSE 80 443 27017"
+    ]
   }],
   "provisioners": [
       {

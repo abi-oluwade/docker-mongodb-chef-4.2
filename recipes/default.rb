@@ -45,7 +45,7 @@ template "/lib/systemd/system/mongod.service" do
   notifies :restart, 'service[mongod]'
 end
 
-# starts mongodb service
-service 'mongod' do
-  action :start
-end
+# # starts mongodb service
+# service 'mongod' do
+#   action :start
+# end

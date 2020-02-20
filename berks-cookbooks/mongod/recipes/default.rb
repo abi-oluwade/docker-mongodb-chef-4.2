@@ -14,9 +14,9 @@ include_recipe 'apt'
 
 # Adds the repository to the soruce list and the key to trustedkeys.gpg (gpg keyring)
 apt_repository 'mongodb-org' do
-  uri 'http://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.2/'
-  components ['main']
-  distribution 'xenial'
+  uri 'http://repo.mongodb.org/apt/ubuntu'
+  components ['multiverse']
+  distribution 'bionic/mongodb-org/4.2'
   key '4B7C549A058F8B6B'
   action :add
   deb_src true
@@ -45,10 +45,7 @@ template "/lib/systemd/system/mongod.service" do
   notifies :restart, 'service[mongod]'
 end
 
-# Restarts mongodb service
-service 'mongod' do
-  action :start
-end
-service 'mongod' do
-  action :enable
-end
+# # starts mongodb service
+# service 'mongod' do
+#   action :start
+# end
